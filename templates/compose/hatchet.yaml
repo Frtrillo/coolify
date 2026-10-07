@@ -12,6 +12,7 @@ services:
     environment:
       - DATABASE_URL=postgres://$SERVICE_USER_POSTGRES:$SERVICE_PASSWORD_POSTGRES@postgres:5432/$POSTGRES_DB
       - SERVICE_URL_HATCHET_80
+      - SERVER_AUTH_SET_EMAIL_VERIFIED=${SERVER_AUTH_SET_EMAIL_VERIFIED:-true}
       # Default credentials are "admin@example.com" and "Admin123!!"
     depends_on:
       postgres:
